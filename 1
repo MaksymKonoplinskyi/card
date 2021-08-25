@@ -1,0 +1,22 @@
+console.log('Hello world!');
+let login = prompt('Vvedite login', '');
+if (login == undefined || login == null) {
+    alert('Otmeneno')  
+} else {
+ if (login != undefined && login != null && login != 'admin') {
+ alert('Ia vas ne znau');
+    } else {
+    if (login == 'admin') {
+    let parol = prompt ('vvedi parol', '');
+            if (parol == undefined || parol == null) {
+                alert('Otmeneno')  
+            } else {
+                if (parol != undefined && parol != null && parol != '123') {
+                    alert('nevernij parol')
+                } else {
+                    if (parol == '123')  alert ('helow');
+                }
+            }
+        }
+    }
+}
