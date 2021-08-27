@@ -69,3 +69,53 @@ color: #2e6932;
     list-style-position: inside;
     font-size: 14px;
 }
+
+/* Спойлеры */
+/* https://www.youtube.com/watch?v=Cj8hWtm_40M */
+.wrapper {
+    height: 100%;
+    
+}
+.block {}
+.block_item {
+    margin: 0px 0px 10px 0px;
+}
+.block_title {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    padding: 0px 0px 0px 30px;
+    cursor: pointer;
+}
+.block_title:before,
+.block_title:after {
+    content: '';
+    width: 13px;
+    height: 2px;
+    background-color: #000;
+    position: absolute;
+    top: 5px;
+    transition: all 0.5s ease 0s;
+}
+.block_title:before{
+    transform: rotate(40deg);
+    left: 0;
+}
+.block_title:after {
+    transform: rotate(-40deg);
+    left: 8px;
+}
+.block_title.active:before,
+.block_title.active::after{
+    background-color: #2e6932;
+}
+.block_title.active:before{
+    transform: rotate(-40deg);
+   }
+.block_title.active:after {
+    transform: rotate(40deg);
+}
+.block_text {
+    display: none;
+    padding: 10px 0px 0px 0px;
+}
